@@ -1,6 +1,6 @@
 
 var bio = {
-  "name": "Elias David Roman",
+  "name": "Elias Roman",
   "Role": "Front-End Web Developer",
   "welcomeMessage": "Hello, this is my resume.",
   "contacts": ["Email: elias.roman2565@gmail.com", "Mobile: 570-452-1873", "GitHub: eliasroman2565", "Location: Allentown, PA"],
@@ -38,6 +38,8 @@ var work = {
     }]
 };
 
+
+
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
   $("#header").prepend(formattedName);
 
@@ -54,19 +56,38 @@ if(bio.skills.length > 0) {
   $("#skills").append(formattedSkill);
 };
 
-for (job in work.jobs) {
-  $("#workExperience").append(HTMLworkStart);
+function displayWork() {
+  for (job in work.jobs) {
+    $("#workExperience").append(HTMLworkStart);
 
-  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-  var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-  var formattedEmployerTitle = formattedEmployer + formattedTitle;
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
-  $(".work-entry:last").append(formattedEmployerTitle);
+    $(".work-entry:last").append(formattedEmployerTitle);
 
-  var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates)
-    $(".work-entry:last").append(formattedDates);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates)
+      $(".work-entry:last").append(formattedDates);
 
-  var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-    $(".work-entry:last").append(formattedDescription);
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+      $(".work-entry:last").append(formattedDescription);
 
+  };
+}
+
+displayWork();
+
+function inName(name) {
+  name = name.trim().split(" ");
+  console.log(name);
+  name[1] = name[1].toUpperCase();
+  name[0] = name[0].slice(0,1).toUpperCase() +
+  name[0].slice(1).toLowerCase();
+
+  return name[0] + " " + name[1];
 };
+$("#main").append(internationalizeButton);
+
+projects.display = funtction() {
+
+}
