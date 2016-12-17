@@ -1,10 +1,15 @@
 
 var bio = {
   "name": "Elias Roman",
-  "Role": "Front-End Web Developer",
+  "role": "Front-End Web Developer",
   "welcomeMessage": "Hello, this is my resume.",
-  "contacts": ["Email: elias.roman2565@gmail.com", "Mobile: 570-452-1873", "GitHub: eliasroman2565", "Location: Allentown, PA"],
+  "contacts": {
+    "email": "elias.roman2565@gmail.com",
+    "mobile": "570-452-1873",
+    "github": "eliasroman2565",
+    "location" : "Allentown, PA"},
   "skills": ["HTML", "CSS", "JavaScript", "Microsoft Office"],
+  "bioPic" : "images/fry.jpg"
 };
 
 var education = {
@@ -45,18 +50,44 @@ var projects = {
     "title" : "Portfolio",
     "dates" : "September, 2016 - October, 2016",
     "description" : "I created a static HTML/CSS webpage which displayed web development projects that I have worked on.",
-    "images" : "http://www.illuminessensce.com/wp-content/uploads/2012/12/Image-Coming-Soon-Placeholder.png"
+    "images" : [
+      "images/197x148.gif",
+     "images/197x148.gif"]
   }, {
     "title" : "Resume",
     "dates" : "October, 2016 - December, 2016",
     "description" : "I created a webpage utilizing HTML/CSS and JavaScript which displayed my work history, contact information, educational history, etc.",
-    "images" : "http://www.illuminessensce.com/wp-content/uploads/2012/12/Image-Coming-Soon-Placeholder.png"
+    "images" : [
+      "images/197x148.gif",
+    "images/197x148.gif"]
   }]
 };
 
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
-  $("#header").prepend(formattedName);
+
+var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
+
+var formattedNameRole = formattedName + formattedRole;
+  $("#header").prepend(formattedNameRole);
+
+
+var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+
+var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
+
+var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
+
+var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
+
+var formattedContacts = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
+  $("#header").append(formattedContacts);
+
+
+var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+  $("#header").append(formattedbioPic);
+
+
 
 if(bio.skills.length > 0) {
   $("#header").append(HTMLskillsStart);
