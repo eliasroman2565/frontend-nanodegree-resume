@@ -13,13 +13,18 @@ var bio = {
 };
 
 var education = {
-  "Schools" : {
+  "schools" : [{
 
       "name": "Penn College",
       "location": "Williamsport, PA",
       "degree": "Not Complete",
       "major": "Civil Engineering"
-    },
+    },{
+      "name" : "Bloomsburg University",
+      "location" : "Bloomsburg, PA",
+      "degree": "Not Complete",
+      "major" : "Pre-Physical Therapy"
+    }],
 
   "onlineCourses" : {
 
