@@ -114,12 +114,14 @@ bio.display = function() {
             $("#skills").append(formattedSkill);
         });
 
-        $("#footerContacts").append(formattedMobile)
-            .append(formattedEmail)
-            .append(formattedGithub)
-            .append(formattedTwitter)
-            .append(formattedLocation);
+
     }
+
+    $("#footerContacts").append(formattedMobile)
+        .append(formattedEmail)
+        .append(formattedGithub)
+        .append(formattedTwitter)
+        .append(formattedLocation);
 };
 
 bio.display();
