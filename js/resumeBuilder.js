@@ -144,7 +144,7 @@ work.display = function() {
         $(".work-entry:last").append(formattedLocation);
 
     });
-}
+};
 work.display();
 
 projects.display = function() {
