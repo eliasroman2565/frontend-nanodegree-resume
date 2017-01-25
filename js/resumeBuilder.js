@@ -10,7 +10,7 @@ var bio = {
         "location": "Allentown, PA"
     },
     "skills": ["HTML", "CSS", "JavaScript", "Microsoft Office"],
-    "biopic": "images/fry.jpg"
+    "biopic": "https://s3.amazonaws.com/aws-website-resume-zbe0n/images/fry.jpg"
 };
 
 var work = {
@@ -34,12 +34,12 @@ var projects = {
         "title": "Portfolio",
         "dates": "September, 2016 - October, 2016",
         "description": "I created a static HTML/CSS webpage which displayed web development projects that I have worked on.",
-        "images": ["images/197x148.gif", "images/350x150.png"]
+        "images": ["https://s3.amazonaws.com/aws-website-resume-zbe0n/images/197x148.gif", "https://s3.amazonaws.com/aws-website-resume-zbe0n/images/350x150.png"]
     }, {
         "title": "Resume",
         "dates": "October, 2016 - December, 2016",
         "description": "I created a webpage utilizing HTML/CSS and JavaScript which displayed my work history, contact information, educational history, etc.",
-        "images": ["images/197x148.gif", "images/350x150.png"]
+        "images": ["https://s3.amazonaws.com/aws-website-resume-zbe0n/images/197x148.gif", "https://s3.amazonaws.com/aws-website-resume-zbe0n/images/350x150.png"]
     }]
 };
 
